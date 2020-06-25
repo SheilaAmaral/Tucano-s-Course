@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Inscrição</title>
+<script>
+function resultado(){
+	c1=document.formulario.nn.value
+	c2=document.formulario.en.value
+	c3=document.formulario.ci.value
+	c4=document.formulario.cp.value
+	c5=document.formulario.cf.value
+	c6=document.formulario.id.value
+	if(c1==""){
+		v1=""
+	} else {
+		v1="nome:"+c1+"\r"
+	}
+	if(c2==""){
+		v2=""
+	} else {
+	v2="Endereço:"+c2+"\r"
+	}
+	if(c3==""){
+		v3=""
+	} else {
+		v3="Cidade:"+c3+"\r"
+	}
+	if(c4==""){
+		v4=""
+	} else {
+		v4="CEP:"+c4+"\r"
+	}
+	if(c5==""){
+		v5=""
+	} else {
+		v5="CPF:"+c5+"\r"
+	}
+	if(c6==""){
+		v6=""
+	} else {
+		v6="Identidade:"+c6+"\r"
+	}
+
+document.formulario.resul.value=(v1+v2+v3+v4+v5+v6)
+}
+function menu(){
+	window.open(document.rápido.rápido.value,"blank")
+}
+</script>
+</head>
+
+<body background="fundo.gif", width="780", height="500">
+<table align="left">
+	<tr><td>
+		<a href="empresa.html" target=blank><img src="letempresa.gif" border=0></a>
+		<br><a href="contato.html" target=blank><img src="letcontato.gif" border=0></a>
+		<br><a href="atcurso.html" target=blank><img src="letcursos.gif" border=0></a>
+		<br><a href="inscrição.html" target=blank><img src="letinscri.gif" border=0></a>
+	</td></tr>
+</table>
+
+<span style="position:absolute; left:200; top:80">
+<table align="center">
+	<tr><td>
+	<form name="formulario">
+		<p>
+			<font size="2" face="Verdana">
+				<br>Nome:  <input type="text" size="25" name="nn">
+				<br>Endereço: <input type="text" size="15" name="en">
+				<br>Cidade: <input type="text" size="15" name="ci">
+				<br>Cep:  <input type="text" size="" name="cp">
+				<br>CPF: <input type="text" size="11" name="cp">
+				<br>Identidade: <input type="text" size="9" name="id">
+			</font>
+		</p>
+		<p>
+			<form name=rápido>
+				<select name= sele onchange="menu()">
+					<option value="letmenu.html">Excel</option>
+					<option value="letfoto.html">Word</option>
+					<option value="letfoto.html">Internet</option>
+					<option value="letfoto.html">Corel</option>
+					<option value="letfoto.html">Linux</option>
+					<option value="letfoto.html">PHotoshop</option>
+					<option value="letfoto.html">PowerPoint</option>
+					<option value="letfoto.html">Flash</option>
+					<option value="letfoto.html">Html</option>
+					<option value="letfoto.html">Java</option>
+				</select>
+		</p>
+			<font size="2" face="Arial"><b>Resultado</b></font><br>
+			<textarea size="30" rows="4" cols="50" name="resul"></textarea><br>
+			<br><input type="button" value="Enviar" onclick="resultado()">
+		</form>
+	</tr></td>
+</table>
+</span>
+
+<span style="position:absolute; left:520; top:100">
+	<table align="center">
+		<tr><td>
+			<img src="run.gif">
+		</tr></td>
+	</table>
+</span>
+</body>
+</HTML> 
